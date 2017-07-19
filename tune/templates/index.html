@@ -5,8 +5,10 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Music</h1>
-    <p>Silence is not an option here.</p>
+    {% for song in songs %}
+    <h2>{{ song.name }}</h2>
+    <p>{{ song.description }}</p>
+    {% endfor %}
 {% endblock content %}
 
 
