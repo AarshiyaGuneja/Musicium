@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block title %}
+    {{ song.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ song.name }}</h1>
+    <p>{{ song.description }}</p>
+{% endblock content %}

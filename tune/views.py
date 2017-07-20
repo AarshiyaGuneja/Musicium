@@ -10,3 +10,10 @@ def index(request):
         'songs': songs,
     })
 
+def song_detail(request, slug):
+    song = Songs.objects.get(slug=slug)
+
+    return render(request, 'songs/song_detail.html', {
+        'song': song,
+    })
+
